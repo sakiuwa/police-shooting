@@ -5,6 +5,8 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Saki Uwagawa">
+        <meta name="description" content="Map and table displaying police shooting data">
     <title>Police Shootings</title>
 
     <!-- jQuery, Bootstrap -->
@@ -13,6 +15,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
     
     <!-- leaflet libraries -->
+    <!--NEWEST VERSION 0.7.5-->
     <script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
     <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" />
 
@@ -23,14 +26,51 @@
   </head>
   <body>
     <!-- You may want to put your title and additional informaiton here -->
+    <header>
+      <div class="container">
+        <h1>Police Shootings</h1>
+        <p>This map and represents the police shooting data which was crowdsourced from <a href="http://regressing.deadspin.com/deadspin-police-shooting-database-update-were-still-go-1627414202" target="_blank">Deadspin</a> using Google Forms. Each individual circle on the map represents a shooting which occurred in the past five years. The table compares the number of people depending on whether they were killed or hit and armed or unarmed.</p>
+      </div>
+    </header>
     <div class="container">
-      <!-- This is the div that your map will go in.  You'll need to reference its id -->
-      <div id="container"></div>
+    	<!-- This is the div that your map will go in.  You'll need to reference its id -->
+      <div class="container">
+      </div>
+      <div>
+        <h3>Killed or Hit vs. Armed or Unarmed</h3>
+        <table class="table table-striped">
+          <tr>
+            <th></th>
+            <th>Killed</th>
+            <th>Hit</th>
+          </tr>
+          <tr>
+            <td class="title">Armed</td>
+            <td id="armed-killed"></td>
+            <td id="armed-hit"></td>
+          </tr>
+          <tr>
+            <td class="title">Unarmed</td>
+            <td id="unarmed-killed"></td>
+            <td id="unarmed-hit"></td>
+          </tr>
+        </table>
+      </div>
+      <br>
+      <p id="key">Blue = Male&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Pink = Female&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Yellow = Unknown</p>
+      <div id="container">
+      </div>
     </div>
+    <br>
+    <br>
+    <footer>
+      <div class="container">
+        <p>If you are interested in finding out more about the project click <a href="http://regressing.deadspin.com/deadspin-police-shooting-database-update-were-still-go-1627414202" target="_blank">here</a>. If you want to participate in the collection of data, fill out the form <a href="https://docs.google.com/forms/d/1ktQEPaG3N5l9RVQ2K77yn8bCRmC_IPvNPqexNwxnPZY/viewform" target="_blank">here</a>.</p>
+      </div>
+    </footer>
     <script>
-      
       // This is where you should execute your drawMap function
-      
+    	drawMap()
     </script>
   </body>
 </html>

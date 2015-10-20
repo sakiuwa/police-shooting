@@ -2,3 +2,29 @@
 #container {
 	height:800px;
 }
+.title {
+	font-weight: bold;
+}
+h1, h3, th, td, p {
+	text-align: center;
+}
+
+h1, h3, th, .title {
+	font-family: 'Century Gothic', sans-serif;
+}
+
+h1 {
+	font-size: 60px;
+	margin-bottom: 1em;
+}
+header {
+	margin-bottom: 2em;
+	background-color: rgba(46, 47, 47, 0.3);
+}
+header p, footer p {
+	margin-top: 2em;
+	margin-bottom: 2em;
+}
+footer {
+	background-color: rgba(46, 47, 47, 0.3);
+}
