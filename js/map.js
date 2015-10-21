@@ -52,7 +52,8 @@ var getData = function() {
 		type: 'get',
 		success: function(data) {
 			customBuild(data);
-		}
+		},
+		dataType: 'json'
 	});
 
   // When your request is successful, call your customBuild function
