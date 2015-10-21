@@ -39,13 +39,20 @@ var drawMap = function() {
 	getData();
 }
 
-
 // Function for getting data
 var getData = function() {
 
   // Execute an AJAX request to get the data in data/response.js
-	var data = $.get( "data/response.json").then(function(data) {
-  		customBuild(data);
+	// var data = $.get( "data/response.json").then(function(data) {
+ //  		customBuild(data);
+	// });
+
+	var data = $.ajax({
+		url:'data/response.json',
+		type: 'get',
+		success: function(data) {
+			customBuild(data);
+		}
 	});
 
   // When your request is successful, call your customBuild function
